@@ -52,13 +52,9 @@
     <Compile Include="RssFeed\Feed.cs" />
     <Compile Include="RssFeed\Haberler.cs" />
     <Compile Include="RssKanal\Dosya.cs" />
-    <Compile Include="RssFeed\Link.cs" />
     <Compile Include="RssKanal\Kanal.cs" />
     <Compile Include="RssKanal\Islem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Paomedia-Small-N-Flat-Rss.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

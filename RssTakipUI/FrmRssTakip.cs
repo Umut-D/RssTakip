@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using RssTakipLibrary.RssFeed;
 using RssTakipLibrary.RssKanal;
@@ -126,10 +127,16 @@ namespace RssTakipUI
 
         private void LstFeed_DoubleClick(object sender, EventArgs e)
         {
-            string linkIcinAra = lstFeed.SelectedItems[0].SubItems[1].Text;
-            string haberLinki = _haber.LinkBul(linkIcinAra);
+            void LinkAc(string link)
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = _haber.LinkBul(link),
+                    UseShellExecute = true
+                });
+            }
 
-            Link.Ac(haberLinki);
+            LinkAc(lstFeed.SelectedItems[0].SubItems[1].Text);
         }
 
         private void TsmiHakkinda_Click(object sender, EventArgs e)
